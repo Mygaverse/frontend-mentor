@@ -2,6 +2,10 @@ main{
     font-family: "outfit";  
 }
 
+.sr-only {
+    display:none；
+}
+
 .container {
     height: 100%;
 }
