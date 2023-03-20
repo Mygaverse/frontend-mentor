@@ -1,0 +1,44 @@
+
+
+.row-outter {
+    height: 100vh;
+}
+
+.col-outter {
+    height: 55%;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+.row-inner {
+    height: 100%;
+    border-radius: 30px;
+}
+
+.col-left {
+    height: 100%;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(0, 0%, 100%);
+    
+}
+
+.row-left {
+    height: 100%;
+}
+
+.circle {
+    border-radius: 100%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    height: 50%;
+    width: 50%;
+    
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution .a { 
+    color: hsl(228, 45%, 44%); 
+}
