@@ -23,6 +23,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 body {
   min-height: 100vh;
   /*max-width: 100%; */
