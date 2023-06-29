@@ -23,16 +23,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-h1 .hidden {
-  visibility: hidden;
-  display: none;
-}
-
-h2 .hidden {
-  visibility: hidden;
-  display: none;
-}
-
 body {
   min-height: 100vh;
   /*max-width: 100%; */
