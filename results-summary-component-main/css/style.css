@@ -23,7 +23,11 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.hidden {
+h1 .hidden {
+  visibility: hidden;
+}
+
+h2 .hidden {
   visibility: hidden;
 }
 
