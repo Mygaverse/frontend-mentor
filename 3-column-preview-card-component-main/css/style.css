@@ -1,44 +1,116 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 
+:root {
+  /*color */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
 
-.row-outter {
-    height: 100vh;
+  /*paragraphs */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /*background, headings, buttons */
+  --Very-light-gray: hsl(0, 0%, 95%);
 }
 
-.col-outter {
-    height: 55%;
-    background-color: aliceblue;
-    border-radius: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.row-inner {
-    height: 100%;
-    border-radius: 30px;
+body {
+  background-color: var(--Very-light-gray);
 }
 
-.col-left {
-    height: 100%;
-    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-    color: hsl(0, 0%, 100%);
-    
+.card-group {
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1607843137);
+  margin: 0 6rem;
 }
 
-.row-left {
-    height: 100%;
+.card {
+  row-gap: 2rem;
+  padding: 2.5rem 2.5rem;
+  --bs-card-group-margin: 0rem;
 }
 
-.circle {
-    border-radius: 100%;
-    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
-    height: 50%;
-    width: 50%;
-    
+.left-col {
+  background-color: var(--Bright-orange);
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.mid-col {
+  background-color: var(--Dark-cyan);
 }
-    
-.attribution .a { 
-    color: hsl(228, 45%, 44%); 
+
+.right-col {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-title {
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display";
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.card-text {
+  color: var(--Transparent-white);
+  font-family: "Lexend Deca";
+  width: 75%;
+  height: 60%;
+  padding-bottom: 5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-style: none;
+  background-color: var(--Very-light-gray);
+}
+
+.btn-left {
+  color: var(--Bright-orange);
+}
+
+.btn-mid {
+  color: var(--Dark-cyan);
+}
+
+.btn-right {
+  color: var(--Very-dark-cyan);
+}
+
+.btn:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border-style: solid;
+  border-color: var(--Very-light-gray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 48.5rem) {
+  .left-col {
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+  .mid-col {
+    border-radius: 0rem;
+  }
+  .right-col {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+  }
 }
