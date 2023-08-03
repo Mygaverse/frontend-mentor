@@ -102,6 +102,10 @@ body {
 }
 
 @media only screen and (max-width: 48.5rem) {
+  .card-group {
+    margin: 5rem 1.5rem;
+  }
+  
   .left-col {
     border-bottom-left-radius: 0rem;
     border-bottom-right-radius: 0rem;
