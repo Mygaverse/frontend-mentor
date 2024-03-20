@@ -7,22 +7,29 @@
   
   --White: hsl(0, 0%, 100%);
   --Light-Grey: hsl(217, 12%, 63%);
+  --Light-Grey-a: hsla(217, 12%, 63%, 0.1);
   --Medium-Grey: hsl(216, 12%, 54%);
   --Dark-Blue: hsl(213, 19%, 18%);
   --Very-Dark-Blue: hsl(216, 12%, 8%);
-  /*main bg*/
-  
-  /*card bg*/
-  
-  /*line*/
 
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+p {
+    font-size: .85rem;
+    color: var(--Medium-Grey);
 }
 
 body {
@@ -34,32 +41,122 @@ body {
     background-color: var(--Very-Dark-Blue);
 }
 
-.card {
+.container {
     background-color: var(--Dark-Blue);
-    min-width: 10rem;
-    min-height: 10rem;
-    padding: 2rem;
+    width: 19rem;
+    padding: 1.5rem;
     border-radius: 1rem;
 }
 
-.rating-state {
+#rating-state {
     width: 100%;
+    /*display: none; */
+}
+
+figure {
+    margin-bottom: 1rem;
+}
+
+.icon {
+    background-color: var(--Light-Grey-a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+    border-radius: 10rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rating-options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 1.5rem;
 }
 
 .rating-btn {
-    background-color: var(--Orange);
+    background-color: var(--Light-Grey-a);
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border-radius: 10rem;
+    border-width: 0;
+    font-size: 0.8rem;
+    color: var(--Light-Grey);  
 }
 
-.thank-you-state {
-    display: none;
+.rating-btn:hover {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.rating-btn:focus {
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+}
+
+#submit-btn {
+    background-color: var(--Orange);
+    font-size: 0.8rem;
+    color: var(--White);
+    width: 100%;
+    margin-top: 2rem;
+    padding: .5rem;
+    border-radius: 3rem;
+    border-width: 0;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#thank-you-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+#display-result {
+    background-color: var(--Light-Grey-a);
+    color: var(--Orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
 }
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 0.8rem; 
     text-align: center; 
     color: var(--White);
     padding-top: 2rem;
 }
 .attribution a { 
     color: var(--Light-Grey); 
+    font-size: 0.8rem; 
+}
+
+@media only screen and (max-width: 25rem) {
+    .container {
+        width: 18.5rem;
+    }
 }
