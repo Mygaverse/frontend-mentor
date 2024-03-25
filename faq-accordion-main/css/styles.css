@@ -58,7 +58,7 @@ main {
     width: 33rem;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: var(--White);
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -71,7 +71,11 @@ main {
 }
 
 .accordion-item {
-    margin: 1rem 0;
+    
+    border-width: 0.5rem;
+    border-bottom: 1px solid var(--Light-Pink);
+    padding: 1rem 0;
+
 }
 
 .accordion-question {
