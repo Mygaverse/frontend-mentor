@@ -1,0 +1,213 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* general */
+:root {
+    /* Primary color */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+    /* basic */
+    --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Cyan);
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(--Light-Gray);
+    
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 36rem;
+    border-radius: .5rem;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1607843137);
+    margin-bottom: 1rem;;
+}
+
+.promote {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    gap: 1rem;
+}
+
+.promote > h2 {
+    color: var(--Bright-Yellow);
+    padding-top: 0.5rem;
+}
+
+.promote > p {
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: row;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Cyan);
+    padding: 2rem 2rem;
+    gap: 1rem;
+    width: 50%;
+    border-bottom-left-radius: 0.5rem;
+
+}
+
+.sign-up > p {
+    line-height: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.price-unit {
+    font-size: 0.8rem;
+    
+    padding-left: 0.5rem;
+}
+
+button {
+    background-color: var(--Bright-Yellow);
+    border-width: 0;
+    width: fit-content;
+    padding: 0.6rem 4.5rem ;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1607843137);
+}
+
+button:hover {
+    background-color: var(--Grayish-Blue);
+    cursor: pointer;
+}
+
+.why-us {
+    display: flex;
+    flex-direction: column;
+    background-color: color-mix(in oklch, transparent, var(--Cyan) 80%);
+    padding: 2rem 2rem;
+    gap: 1rem;
+    width: 50%;
+    border-bottom-right-radius: 0.5rem;   
+}
+
+ul {
+    list-style-type: none;
+    color: var(--Light-Gray);
+    
+}
+
+li {
+    font-size: 0.7rem;
+    padding: 0.1rem 0;
+}
+
+
+/* footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--Grayish-Blue);
+}
+.attribution a { 
+    font-size: 11px;
+    color: hsl(228, 45%, 44%); 
+}
+
+/* responsive for mobile design */
+@media only screen and (max-width: 40rem) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    h2 {
+        font-size: 0.9rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        
+    }
+    
+    main {
+        width: 20rem;
+        border-radius: .5rem;
+        margin: 2rem 0;
+    }
+
+    .promote > p {
+        font-size: 0.8rem;
+    }
+
+    .subscription {
+        flex-direction: column;
+    }
+
+    .sign-up {
+        padding: 1.5rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0; 
+        width: auto;
+    }
+
+    button {
+        width: auto;
+        padding: 0.8rem 0 ;
+    }
+
+    .why-us {
+        padding: 1.5rem 1.5rem;
+        gap: 1.5rem;
+        width: auto;
+        border-bottom-left-radius: 0.5rem;   
+    }
+
+    li {
+        font-size: 0.8rem;
+    }
+    
+}
