@@ -9,20 +9,37 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 <body>
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+  </header>
 
-  We are launching soon!
+  <main>
+    <section class="top">
+      <h1><span class="light-font">We are launching</span> soon!</h1>
+      <p>Subscribe and get notified</p>
+      <form action="">
+        <input type="email" name="email" placeholder="Your Email Address ...">
+        <button>Notify Me</button>
+      </form>
+      <figure>
+        <img src="./images/illustration-dashboard.png" alt="">
+      </figure>
+    </section>
+    
+    <section class="bottom">
+      <figure>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i> 
+      </figure>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </section>
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+  </main>
 
   <footer>
     <p class="attribution">
@@ -30,5 +47,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script src="https://kit.fontawesome.com/dd0e3d7bad.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
