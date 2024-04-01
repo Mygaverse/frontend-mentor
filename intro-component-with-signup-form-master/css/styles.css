@@ -1,0 +1,134 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* general */
+:root {
+    /* primary color */
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+
+    /* accent color */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* neutral color */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+    --White: hsl(0, 100%, 100%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Red);
+    background-image: url("../images/bg-intro-desktop.png");
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* main */
+
+main {
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    width: 50%;
+    color: var(--White);
+    gap: 1.5rem;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 5rem;
+    width: 50%;
+    gap: 1rem;
+}
+
+.promote {
+    background-color: var(--Blue);
+    border-radius: 0.5rem;
+    border: 0;
+    color: var(--White);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 2.5rem;
+    gap: 1.2rem;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Grayish-Blue);
+    text-indent: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--Green);
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    border: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--White);
+    font-weight: 500;
+}
+
+.terms {
+    width: 100%;
+    
+}
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
