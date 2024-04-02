@@ -51,10 +51,10 @@ p {
 /* main */
 
 main {
-    margin: 5rem;
+    margin: 10rem;
     display: flex;
     flex-direction: row;
-
+    gap: 3rem;
 }
 
 .left-panel {
@@ -62,8 +62,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 5rem;
-    padding-right: 2rem;
     width: 50%;
     color: var(--White);
     gap: 1.5rem;
@@ -74,8 +72,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 2rem;
-    padding-right: 5rem;
     width: 50%;
     gap: 1rem;
 }
@@ -83,52 +79,203 @@ main {
 .promote {
     background-color: var(--Blue);
     border-radius: 0.5rem;
-    border: 0;
+    border: none;
     color: var(--White);
     width: 100%;
     text-align: center;
     padding: 1rem 0;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.499);
+}
+
+.sign-up {
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5rem 2.5rem;
+    box-sizing: border-box;
 }
 
 #form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     
-    padding: 2.5rem;
-    gap: 1.2rem;
-    background-color: var(--White);
-    border-radius: 0.5rem;
+}
+
+label {
+    position: relative;
 }
 
 input {
     width: 100%;
+    margin-top: 1rem ;
     padding: 1rem 0;
     border-radius: 0.5rem;
     border: 1px solid var(--Grayish-Blue);
     text-indent: 2rem;
     font-size: 0.8rem;
     font-weight: 600;
+    display: inline-block;
 }
 
 button[type="submit"] {
     width: 100%;
     background-color: var(--Green);
     padding: 1rem 0;
+    margin-top: 1rem;
     border-radius: 0.5rem;
     border: 0;
     text-align: center;
     text-transform: uppercase;
     color: var(--White);
     font-weight: 500;
+    cursor: pointer;
 }
 
-.terms {
-    width: 100%;
+button[type="submit"]:hover {
+    background-color: color-mix(in oklch, transparent, var(--Green) 70%);
+}
+
+.error-message {
+    font-size: 0.8rem;
+    color: var(--Red);
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.error-field {
+    /* error focus that override initial focus with high priority */
+    border: 1px solid var(--Red) !important;
+}
+
+.error-icon {
+    position: absolute; /* Absolute positioning within the form group */
+    display: none;
+    top: 2rem;
+    right: 1rem; /* Padding from the right edge of input */
     
 }
 
+#success-message {
+    font-size: 1rem;
+    color: var(--Green);
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.terms {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--Grayish-Blue);
+    padding-bottom: 1.5rem;
+}
+
+.terms-link {
+    color:var(--Red);
+    font-size: 0.7rem;
+}
+
 /* footer */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--White);
+}
+
+.attribution a { 
+    font-size: 11px;
+    color: var(--Dark-Blue) 
+};
+
+
+/* responsive for mobile design */
+@media only screen and (max-width: 45rem) {
+    
+    body {
+        background-image: url("../images/bg-intro-mobile.png");
+        
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    main {
+        margin: 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left-panel {
+        width: 100%;
+        gap: 1.5rem;
+    }
+    
+    .right-panel {
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .promote {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    
+    .sign-up {
+        padding: 1rem 1.5rem;
+    }
+    
+    input {
+        width: 100%;
+        margin-top: 1rem ;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+        border: 1px solid var(--Grayish-Blue);
+        text-indent: 2rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+        background-color: var(--Green);
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        border: 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--White);
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: color-mix(in oklch, transparent, var(--Green) 70%);
+    }
+    
+    .error-message {
+        font-size: 0.8rem;
+        color: var(--Red);
+        text-align: right;
+        font-style: italic;
+        font-weight: 500;
+    }
+    
+    #success-message {
+        font-size: 1rem;
+        color: var(--Green);
+        text-align: center;
+        font-style: italic;
+        font-weight: 500;
+        margin: 1rem 0;
+    }
+    
+}
