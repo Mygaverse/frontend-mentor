@@ -1,0 +1,106 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* general */
+:root {
+    /* ### Primary color */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /* ### Neutral color */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--White);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Dark-Grayish-Magenta);
+    line-height: 1.5rem;
+}
+
+/* main */
+main {
+    margin: 5rem;
+    padding: 5rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    gap: 2rem;
+    
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    gap: 1rem;
+}
+
+.right > figure:nth-child(1) {
+    padding: 1rem 2rem;
+    background-color: var(--Light-Grayish-Magenta);
+    margin-right: 3rem;
+}
+
+.right > figure > span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    padding-left: 1rem;
+    
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem 0;
+}
+
+/* footer */
+.attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+.attribution a {
+        color: hsl(228, 45%, 44%);
+      }
