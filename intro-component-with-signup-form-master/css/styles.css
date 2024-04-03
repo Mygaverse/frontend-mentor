@@ -191,7 +191,7 @@ button[type="submit"]:hover {
 .attribution a { 
     font-size: 11px;
     color: var(--Dark-Blue) 
-};
+}
 
 
 /* responsive for mobile design */
@@ -205,11 +205,16 @@ button[type="submit"]:hover {
     h1 {
         font-size: 1.5rem;
         line-height: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
     }
     
     main {
-        margin: 3rem 1rem;
-        display: flex;
+        margin: 6rem 1.5rem;
         flex-direction: column;
     }
     
@@ -225,57 +230,23 @@ button[type="submit"]:hover {
     
     .promote {
         width: 100%;
-        padding: 1rem 0;
+        padding: 1rem 3rem;
+        box-sizing: border-box;
     }
     
     .sign-up {
         padding: 1rem 1.5rem;
     }
     
-    input {
-        width: 100%;
-        margin-top: 1rem ;
-        padding: 1rem 0;
-        border-radius: 0.5rem;
-        border: 1px solid var(--Grayish-Blue);
-        text-indent: 2rem;
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
-    
-    button[type="submit"] {
-        width: 100%;
-        background-color: var(--Green);
-        padding: 1rem 0;
-        margin-top: 1rem;
-        border-radius: 0.5rem;
-        border: 0;
-        text-align: center;
-        text-transform: uppercase;
-        color: var(--White);
-        font-weight: 500;
-        cursor: pointer;
-    }
-    
-    button[type="submit"]:hover {
-        background-color: color-mix(in oklch, transparent, var(--Green) 70%);
-    }
-    
     .error-message {
-        font-size: 0.8rem;
-        color: var(--Red);
-        text-align: right;
-        font-style: italic;
-        font-weight: 500;
+        font-size: 0.7rem;
     }
     
     #success-message {
-        font-size: 1rem;
-        color: var(--Green);
-        text-align: center;
-        font-style: italic;
-        font-weight: 500;
-        margin: 1rem 0;
+        font-size: 0.8rem;
     }
     
+    .terms {
+        padding-bottom: 1rem;
+    }
 }
