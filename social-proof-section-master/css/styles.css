@@ -85,27 +85,52 @@ main {
     gap: 1rem;
 }
 
-.right > figure {
-    padding: 1rem 0 1rem 2rem;
-    background-color: var(--Light-Grayish-Magenta);
+.right > header:nth-child(1) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
+.right > header:nth-child(2) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.right > header:nth-child(3) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right > header > figure {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0 1rem 2rem;
+    background-color: var(--Light-Grayish-Magenta);
+    width: 65%;
+}
+
+/* solution for position flex items with margin
 .right > figure:nth-child(1) {
-    margin-right: 6rem;
-    margin-left: 2rem;
+    margin-right: 10rem;
+    margin-left: 0rem;
 }
 
 .right > figure:nth-child(2) {
-    margin-right: 4rem;
-    margin-left: 4rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
 .right > figure:nth-child(3) {
-    margin-right: 2rem;
-    margin-left: 6rem;
-}
+    margin-right: 0rem;
+    margin-left: 10rem;
+}*/
 
-.right > figure > span {
+.right > header > figure > figcaption {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--Very-Dark-Magenta);
@@ -194,10 +219,6 @@ main {
         font-size: 1.1rem;
     }
     
-    p {
-        font-size: 1.1rem;
-    }
-    
     /* main */
     main {
         margin: 5rem 1.5rem;
@@ -219,16 +240,26 @@ main {
        box-sizing: border-box;
     }
     
-    .right {
-        
+    .right > header:nth-child(1) {
+        display: inline-block;
     }
     
-    .right > figure {
-        padding: 1.5rem 15rem;
+    .right > header:nth-child(2) {
+        display: inline-block;
+    }
+    
+    .right > header:nth-child(3) {
+        display: inline-block;
+    }
+
+    .right > header > figure {
+        display: inline-block;
+        padding: 1rem 0;
         text-align: center;
         width: 100%;
     }
     
+    /*
     .right > figure:nth-child(1) {
         margin: 0;
     }
@@ -240,63 +271,37 @@ main {
     .right > figure:nth-child(3) {
         margin: 0;
     }
+    */
     
-    .right > figure > span {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--Very-Dark-Magenta);
-        padding-left: 2rem;
+    .right > header > figure > figcaption {
+        padding-left: 0;
+        padding-top: 0.5rem;
     }
     
     .bottom {
-        display: flex;
-        flex-direction: row;
-        padding: 5rem 0;
-        gap: 2rem;
-    }
-    
-    .bottom > article {
-        background-color: var(--Very-Dark-Magenta);
-        padding: 2rem 1.7rem;
-        border-radius: 0.6rem;
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .bottom > article:nth-child(1) {
-        margin-bottom: 4rem;
+        margin: 0;
     }
     
     .bottom > article:nth-child(2) {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin: 0;
     }
     
     .bottom > article:nth-child(3) {
-        margin-top: 4rem;
+        margin: 0;
         
     }
     
-    .bottom > article > figure {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 1rem;
-    }
-    
     .bottom > article > figure img {
-        border-radius: 5rem;
         width: 3rem;
     }
     
-    .profile {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0.5rem;
-        padding-left: 1.5rem;
-    
-    }
-    
     .verified {
-        font-size: 1.3rem;
-        font-weight: 500;
-        color: var(--Soft-Pink);
+        font-size: 1.1rem;
+        font-weight: 400;
     }
 }
