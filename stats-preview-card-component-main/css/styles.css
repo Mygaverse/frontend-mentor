@@ -11,15 +11,14 @@
 
     /* ### Neutral color */
     --White: hsl(0, 0%, 100%);
-    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
-    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    --Slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    font-family: "Lexend Deca", sans-serif;
     font-size: 15px;
 }
 
@@ -33,8 +32,9 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: var(--White);
+    font-weight: 700;
 }
 
 h2 {
@@ -43,15 +43,18 @@ h2 {
 }
 
 p {
-    font-size: 1rem;
-    color: var(--Slightly-transparent-white);
+    font-size: 0.9rem;
+    color: var(--Slightly-transparent-white-main);
 }
 
 /* main */
 main {
-    margin: 5rem;
     display: flex;
     flex-direction: row;
+    width: 72rem ;
+    height: fit-content;
+    border-radius: 0.8rem;
+    overflow: hidden;
 }
 
 .context {
@@ -60,20 +63,51 @@ main {
     flex-grow: 1;
     flex-basis: 0;
     background-color: var(--Dark-desaturated-blue);
+    box-sizing: border-box;
+    padding: 4.5rem 8rem 0 4rem;
+    gap: 1.5rem;
+}
+
+.context span {
+    color: var(--Soft-violet);
+    font-size: 2.2rem;
+}
+
+.context p {
+    width: 90%;
+    line-height: 1.5rem;
 }
 
 .context article {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-top: 5rem;
+}
+
+.context article header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    gap: 0.5rem;
+}
+
+.context article header p {
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--Slightly-transparent-white-stat);
 }
 
 .header {
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
-
+    width: 100%;  
 }
+
 
 /* footer */
 .attribution { font-size: 11px; text-align: center; }
